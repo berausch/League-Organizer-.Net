@@ -1,0 +1,13 @@
+﻿@model IEnumerable<LeagueOrganizer.Models.Team>
+
+@{
+    ViewData["Title"] = "Teams";
+}
+
+<h2>All Teams</h2>
+@foreach (var team in Model)
+{
+    <br />
+    @Html.ActionLink(team.Name, "Details", new { id = team.TeamId })
+
+}

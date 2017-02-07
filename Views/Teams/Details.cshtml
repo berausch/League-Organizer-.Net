@@ -1,0 +1,22 @@
+﻿@model LeagueOrganizer.Models.Team
+
+@{
+    ViewData["Title"] = "Team Details";
+}
+
+<h2>Team Details</h2>
+<hr />
+
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+<p>Division : @Html.DisplayFor(model => model.Division.Name)</p>
+<p>Captain Name: @ViewBag.Captain</p>
+
+<p>Players:</p>
+@foreach (var player in Model.Players)
+{
+    
+    <p> - @Html.DisplayFor(modelDivision => player.FName) @Html.DisplayFor(modelDivision => player.LName)</p>
+}
+
+
+@Html.ActionLink("Back to List", "Index")</p>
