@@ -1,0 +1,14 @@
+﻿@model LeagueOrganizer.Models.Player 
+
+@{
+    ViewData["Title"] = "Player Details";
+}
+
+<h2>Player Details</h2>
+<hr />
+
+<p>Name: @Html.DisplayFor(model => model.FName) @Html.DisplayFor(model => model.LName)</p>
+<p>Team : @Html.DisplayFor(model => model.Team.Name)</p>
+<p>Division : @ViewBag.playerDiv</p>
+
+<p>@Html.ActionLink("Back to List", "Index")</p>
