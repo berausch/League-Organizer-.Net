@@ -1,5 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<LeagueOrganizer.Models.Player>
+
+@{
+    ViewData["Title"] = "Players";
 }
 
 <h2>All Players</h2>
+@foreach (var player in Model)
+{
+    <br />
+    <p>
+        <strong>@Html.ActionLink(player.FName + " " + player.LName, "Details", new { id = player.PlayerId }) </strong>
+
+        @Html.ActionLink("Edit", "Edit", new { id = player.PlayerId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = player.PlayerId })
+    </p>
+
+}
+@Html.ActionLink("Create New Player", "Create")

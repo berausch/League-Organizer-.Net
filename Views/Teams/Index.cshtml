@@ -8,6 +8,12 @@
 @foreach (var team in Model)
 {
     <br />
-    @Html.ActionLink(team.Name, "Details", new { id = team.TeamId })
+    <span>
+        @Html.ActionLink(team.Name, "Details", new { id = team.TeamId }) |
+        @Html.ActionLink("Edit", "Edit", new { id = team.TeamId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = team.TeamId})
+    </span>
 
 }
+<br/><br />
+@Html.ActionLink("Create New Team", "Create")

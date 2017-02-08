@@ -1,0 +1,20 @@
+﻿@model LeagueOrganizer.Models.Player
+
+@{ 
+    ViewData["title"] = "Create Player";
+}
+<h3>Player Information</h3>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.FName)<br />
+    @Html.TextBoxFor(model => model.FName)<br />
+
+    @Html.LabelFor(model => model.LName)<br />
+    @Html.TextBoxFor(model => model.LName)<br />
+
+    @Html.LabelFor(model => model.TeamId)
+    @Html.DropDownList("TeamId")
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>
