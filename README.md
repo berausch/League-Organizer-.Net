@@ -10,7 +10,7 @@ _{This is a .Net exercise made for Epicodus.}_
 
 ## Setup/Installation Requirements
 
-* _Go to https://github.com/berausch/Gummi.NetFri
+* _Go to https://github.com/berausch/League-Organizer-.Net.git
 * _Clone the repository
 * _Open the project in Visual Studio
 * _Open your terminal and navigate to Visual Studio, and then Projects\Gummi\src\Gummi 
